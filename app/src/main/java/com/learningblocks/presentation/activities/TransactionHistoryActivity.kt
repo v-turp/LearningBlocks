@@ -4,13 +4,13 @@ import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.learningblocks.R
 import com.learningblocks.presentation.adapters.TransactionHistoryAdapter
-import kotlinx.android.synthetic.main.activity_home.*
+import kotlinx.android.synthetic.main.activity_transaction_history.*
 
 class TransactionHistoryActivity : BaseActivity(){
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_home)
+        setContentView(R.layout.activity_transaction_history)
         setSupportActionBar(findViewById(R.id.wallet_toolbar))
         init()
     }
