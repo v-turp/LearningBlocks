@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="70dp"
         android:background="@android:color/white"
         xmlns:tools="http://schemas.android.com/tools"
         xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -12,6 +12,7 @@
             android:layout_height="@dimen/price_info_height"
             android:layout_width="@dimen/price_info_width"
             android:contentDescription="@string/price_status"
+            android:src="@android:drawable/presence_busy"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -25,31 +26,33 @@
             app:layout_constraintStart_toEndOf="@+id/img_price_info"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" android:id="@+id/linearLayout"
-            android:layout_marginLeft="52dp" android:layout_marginStart="52dp">
+            android:layout_marginLeft="24dp" android:layout_marginStart="24dp">
 
         <TextView
-                android:id="@+id/txt_trans_hash"
+                android:id="@+id/txt_transaction_hash"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="13sp"
+                android:textSize="21sp"
                 android:textColor="@android:color/black"
                 tools:text="di9k3-sJ9kdkIe73ns9"
                 tools:textSize="13sp" tools:layout_editor_absoluteY="269dp" tools:layout_editor_absoluteX="2dp"/>
 
         <TextView
+                android:id="@+id/txt_transaction_date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="13sp"
+                android:textSize="21sp"
                 android:textColor="@android:color/darker_gray"
                 tools:text="10/19/03 10:20 12 333"
                 tools:textSize="13sp"/>
     </LinearLayout>
 
     <TextView
-            android:id="@+id/txt_price_change"
+            android:id="@+id/txt_transaction_send_receive"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="18sp"
+            android:textColor="@android:color/holo_red_dark"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginEnd="46dp"
