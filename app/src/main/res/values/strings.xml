@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Learning Blocks</string>
     <string name="price_status">Price Status</string>
+    <string name="transaction">Transactions</string>
+    <string name="quiz">Quiz</string>
+    <string name="home">Home</string>
 </resources>
