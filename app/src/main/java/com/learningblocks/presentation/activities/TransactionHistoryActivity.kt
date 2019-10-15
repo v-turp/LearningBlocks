@@ -1,13 +1,12 @@
 package com.learningblocks.presentation.activities
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.learningblocks.R
 import com.learningblocks.presentation.adapters.TransactionHistoryAdapter
 import kotlinx.android.synthetic.main.activity_home.*
 
-class TransactionHistoryActivity : AppCompatActivity() {
+class TransactionHistoryActivity : BaseActivity(){
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
