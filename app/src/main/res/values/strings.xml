@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Learning Blocks</string>
+    <string name="price_status">Price Status</string>
 </resources>
