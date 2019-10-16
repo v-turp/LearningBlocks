@@ -1,12 +1,17 @@
 package com.learningblocks.presentation.activities
 
 import android.os.Bundle
+import android.util.Log
+import android.view.MenuItem
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.bottomnavigation.BottomNavigationView.OnNavigationItemReselectedListener
 import com.learningblocks.R
 import com.learningblocks.presentation.adapters.TransactionHistoryAdapter
 import kotlinx.android.synthetic.main.activity_transaction_history.*
 
-class TransactionHistoryActivity : BaseActivity(){
+class TransactionHistoryActivity : BaseActivity(), BottomNavigationView.OnNavigationItemSelectedListener{
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,10 +26,34 @@ class TransactionHistoryActivity : BaseActivity(){
         const val TRANSACTION_SENT_RECEIVED = "transaction_sent_received"
     }
 
-    private fun init(){
+    override fun onNavigationItemSelected(menuItem: MenuItem): Boolean {
+
+        Toast.makeText(this, menuItem.title,Toast.LENGTH_LONG).show()
+        return true
+    }
+
+    private fun init(): Boolean {
         setSupportActionBar(findViewById(R.id.wallet_toolbar))
         rv_transactions.layoutManager = LinearLayoutManager(this)
         rv_transactions.adapter = TransactionHistoryAdapter(getMockData())
+
+        // set menu listener
+        val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.action_favorites -> {
+                    return@OnNavigationItemSelectedListener true
+                }
+                R.id.action_schedules -> {
+                    return@OnNavigationItemSelectedListener true
+                }
+                R.id.action_music -> {
+                    return@OnNavigationItemSelectedListener true
+                }
+            }
+            false
+        }
+        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
+        return true
     }
 
     // --- purely used for mck data
