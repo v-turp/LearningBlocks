@@ -4,4 +4,25 @@
     <string name="transaction">Transactions</string>
     <string name="quiz">Quiz</string>
     <string name="home">Home</string>
+    <string name="true_false">True or False:</string>
+
+    <!-- Quiz questions -->
+    <string name="question1">If I work 8hrs/day and make $10 and hour, then I can afford an apartment for $1500.</string>
+    <string name="question2">If I make $1500/month, then I can invest $500 in Bitcoin.</string>
+    <string name="question3">If I make $2000/month I should save $50 in my bank.</string>
+    <string name="question4">Food and shelter determine my monthly cost of living.</string>
+    <string name="question5">If I do not have enough to purchase holiday gifts, then it\'s OK to use a credit card.</string>
+
+    <!-- Quiz answers -->
+    <string name="question1_answer">False: \nMost apartments require 3-4x salary to live.
+    In this case you will need a place that costs $400 - $500.</string>
+    <string name="question2_answer">False: \nIt\'s a rule of thumb to only invest with a small amount you won\'t
+    lose sleep over. You must also take into account your overall living expenses. In this case $10 may be a good
+    amount to invest in bitcoin once a month.</string>
+    <string name="question3_answer">True: \nYou should save 5% or more of your monthly income. A savings account
+    may not five a high return but it is seen as a safe way to store funds.</string>
+    <string name="question4_answer">\False: \n Your cost of living should incorporate all aspects of your monthly
+    costs. Food, utility, shelter and more.</string>
+    <string name="question5_answer">False: \nYou should never buy something you do not have the funds for.
+        Also, never use a credit card…never.</string>
 </resources>
