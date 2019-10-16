@@ -27,11 +27,17 @@
     <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_transactions"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_constraintBottom_toTopOf="@+id/navigation"
+            android:layout_height="wrap_content"
+
             app:layout_constraintTop_toBottomOf="@+id/wallet_toolbar"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"/>
+
+    <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/navigation"
@@ -40,7 +46,8 @@
             android:layout_gravity="start"
             android:background="@color/design_default_color_primary_dark"
             app:menu="@menu/bottom_navigation"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"/>
+            />
+
+    </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
