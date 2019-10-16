@@ -26,13 +26,15 @@
             app:layout_constraintStart_toEndOf="@+id/img_price_info"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" android:id="@+id/linearLayout"
-            android:layout_marginLeft="24dp" android:layout_marginStart="24dp">
+            android:layout_marginLeft="24dp" android:layout_marginStart="24dp"
+            app:layout_constraintEnd_toStartOf="@+id/txt_transaction_send_receive" android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp">
 
         <TextView
                 android:id="@+id/txt_transaction_hash"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="21sp"
+                android:textSize="13sp"
                 android:textColor="@android:color/black"
                 tools:text="di9k3-sJ9kdkIe73ns9"
                 tools:textSize="13sp" tools:layout_editor_absoluteY="269dp" tools:layout_editor_absoluteX="2dp"/>
@@ -41,7 +43,7 @@
                 android:id="@+id/txt_transaction_date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="21sp"
+                android:textSize="14sp"
                 android:textColor="@android:color/darker_gray"
                 tools:text="10/19/03 10:20 12 333"
                 tools:textSize="13sp"/>
@@ -51,10 +53,8 @@
             android:id="@+id/txt_transaction_send_receive"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="18sp"
+            android:textSize="13sp"
             android:textColor="@android:color/holo_red_dark"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
             android:layout_marginEnd="46dp"
             android:layout_marginRight="46dp"
             android:layout_marginTop="353dp"
@@ -62,9 +62,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/linearLayout"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintVertical_bias="0.509"
             tools:text="-0.000005"
             tools:textColor="@android:color/holo_red_dark"/>
 

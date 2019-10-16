@@ -5,6 +5,8 @@
     <string name="quiz">Quiz</string>
     <string name="home">Home</string>
     <string name="true_false">True or False:</string>
+    <string name="_true">True</string>
+    <string name="_false">False</string>
 
     <!-- Quiz questions -->
     <string name="question1">If I work 8hrs/day and make $10 and hour, then I can afford an apartment for $1500.</string>
@@ -25,4 +27,5 @@
     costs. Food, utility, shelter and more.</string>
     <string name="question5_answer">False: \nYou should never buy something you do not have the funds for.
         Also, never use a credit card…never.</string>
+    <string name="submit_responses">Submit Responses</string>
 </resources>
