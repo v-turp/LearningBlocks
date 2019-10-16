@@ -6,15 +6,35 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+    <androidx.appcompat.widget.Toolbar
+            android:id="@+id/wallet_toolbarx"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#000FFF"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/app_bar_text_size"
+                android:text="@string/quiz"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
     <ScrollView
             android:background="@android:color/white"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
             android:layout_width="match_parent"
-            android:layout_height="500dp"
-            app:layout_constraintTop_toTopOf="parent"
+            android:layout_height="450dp"
+            app:layout_constraintTop_toBottomOf="@+id/wallet_toolbarx"
             app:layout_constraintBottom_toTopOf="@+id/navigation"
-            app:layout_constraintVertical_bias="1.0">
+            app:layout_constraintVertical_bias="0.0">
         <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
