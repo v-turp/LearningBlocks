@@ -8,9 +8,18 @@ import android.widget.RadioGroup
 import android.widget.Toast
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.learningblocks.R
+import com.learningblocks.domain.TokenBalance
+import com.learningblocks.presentation.SurveyService
 import kotlinx.android.synthetic.main.activity_quiz.*
 import kotlinx.android.synthetic.main.activity_transaction_history.*
 import kotlinx.android.synthetic.main.activity_transaction_history.navigation
+import okhttp3.Call
+import okhttp3.OkHttpClient
+import okhttp3.logging.HttpLoggingInterceptor
+import retrofit2.Callback
+import retrofit2.Response
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 
 class QuizActivity: BaseActivity(), View.OnClickListener{
 
@@ -39,6 +48,25 @@ class QuizActivity: BaseActivity(), View.OnClickListener{
 
         rb_q5_true.setOnClickListener(this)
         rb_q5_false.setOnClickListener(this)
+
+        btn_submit_survey.setOnClickListener(View.OnClickListener {
+            val BASE_URL = "http://54.191.48.144:5000/"
+
+            val okHttpClient = OkHttpClient.Builder()
+            var interceptor = HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
+            okHttpClient.addInterceptor(interceptor)
+
+            val retrofit = Retrofit.Builder()
+                .baseUrl(BASE_URL)
+                .client(okHttpClient.build())
+                .addConverterFactory(GsonConverterFactory.create())
+                .build()
+
+            val surveyService = retrofit.create(SurveyService::class.java)
+            val tokenBalance = surveyService.pushTokens()
+
+            tokenBalance.enqueue(TokenPushCallback())
+        })
     }
 
     override fun onStart() {
@@ -107,4 +135,16 @@ class QuizActivity: BaseActivity(), View.OnClickListener{
         Log.d("Response", response4.toString())
         Log.d("Response", response5.toString())
     }
+
+    inner class TokenPushCallback: Callback<TokenBalance> {
+        override fun onFailure(call: retrofit2.Call<TokenBalance>, t: Throwable) {
+
+        }
+
+        override fun onResponse(call: retrofit2.Call<TokenBalance>, response: Response<TokenBalance>) {
+
+        }
+
+    }
+
 }
