@@ -138,11 +138,11 @@ class QuizActivity: BaseActivity(), View.OnClickListener{
 
     inner class TokenPushCallback: Callback<TokenBalance> {
         override fun onFailure(call: retrofit2.Call<TokenBalance>, t: Throwable) {
-
+            Log.d("TokenPushCallback", " onFailure()")
         }
 
         override fun onResponse(call: retrofit2.Call<TokenBalance>, response: Response<TokenBalance>) {
-
+            Log.d("TokenPushCallback", "onResponse")
         }
 
     }
