@@ -19,7 +19,6 @@ class TransactionHistoryActivity : BaseActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_transaction_history)
-        setSupportActionBar(findViewById(R.id.wallet_toolbar))
         init()
     }
 
@@ -47,7 +46,6 @@ class TransactionHistoryActivity : BaseActivity(){
     }
 
     private fun init(){
-        setSupportActionBar(findViewById(R.id.wallet_toolbar))
         rv_transactions.layoutManager = LinearLayoutManager(this)
         rv_transactions.adapter = TransactionHistoryAdapter(getMockData())
     }
