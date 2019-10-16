@@ -50,15 +50,18 @@
                     style="@style/question_style"
                     android:text="@string/question1"/>
             <RadioGroup
+                    android:id="@+id/rbg_question1"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:background="@color/design_default_color_primary_dark">
                 <RadioButton
+                        android:id="@+id/rb_q1_true"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/_true"/>
                 <RadioButton
+                        android:id="@+id/rb_q1_false"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/_false" android:visibility="visible"/>
@@ -75,15 +78,18 @@
                     style="@style/question_style"
                     android:text="@string/question2"/>
             <RadioGroup
+                    android:id="@+id/rbg_question2"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:background="@color/design_default_color_primary_dark">
                 <RadioButton
+                        android:id="@+id/rb_q2_true"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/_true"/>
                 <RadioButton
+                        android:id="@+id/rb_q2_false"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/_false" android:visibility="visible"/>
@@ -100,15 +106,18 @@
                     android:text="@string/question3"
             />
             <RadioGroup
+                    android:id="@+id/rbg_question3"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:background="@color/design_default_color_primary_dark">
                 <RadioButton
+                        android:id="@+id/rb_q3_true"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/_true"/>
                 <RadioButton
+                        android:id="@+id/rb_q3_false"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/_false" android:visibility="visible"/>
@@ -124,15 +133,18 @@
                     style="@style/question_style"
                     android:text="@string/question4"/>
             <RadioGroup
+                    android:id="@+id/rbg_question4"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:background="@color/design_default_color_primary_dark">
                 <RadioButton
+                        android:id="@+id/rb_q4_true"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/_true"/>
                 <RadioButton
+                        android:id="@+id/rb_q4_false"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/_false" android:visibility="visible"/>
@@ -148,15 +160,18 @@
                     style="@style/question_style"
                     android:text="@string/question5"/>
             <RadioGroup
+                    android:id="@+id/rbg_question5"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:background="@color/design_default_color_primary_dark">
                 <RadioButton
+                        android:id="@+id/rb_q5_true"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/_true"/>
                 <RadioButton
+                        android:id="@+id/rb_q5_false"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/_false" android:visibility="visible"/>

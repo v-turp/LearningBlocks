@@ -28,4 +28,6 @@
     <string name="question5_answer">False: \nYou should never buy something you do not have the funds for.
         Also, never use a credit card…never.</string>
     <string name="submit_responses">Submit Responses</string>
+    <string name="blocks">Blocks</string>
+    <string name="learning">Learning</string>
 </resources>
