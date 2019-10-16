@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<androidx.constraintlayout.widget.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-
         android:background="@android:color/white"
-        android:padding="20dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+<ScrollView
+        android:background="@android:color/white"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/navigation">
     <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
         <TextView
@@ -22,6 +28,21 @@
                 android:id="@+id/txt_question1"
                 style="@style/question_style"
                 android:text="@string/question1"/>
+        <RadioGroup
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/design_default_color_primary_dark">
+            <RadioButton
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="@string/_true"/>
+            <RadioButton
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="@string/_false" android:visibility="visible"/>
+        </RadioGroup>
+
 
 
         <TextView
@@ -33,6 +54,20 @@
                 android:id="@+id/txt_question2"
                 style="@style/question_style"
                 android:text="@string/question2"/>
+        <RadioGroup
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/design_default_color_primary_dark">
+            <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_true"/>
+            <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_false" android:visibility="visible"/>
+        </RadioGroup>
 
         <TextView
                 style="@style/question_style"
@@ -44,6 +79,20 @@
                 style="@style/question_style"
                 android:text="@string/question3"
                  />
+        <RadioGroup
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/design_default_color_primary_dark">
+            <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_true"/>
+            <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_false" android:visibility="visible"/>
+        </RadioGroup>
 
         <TextView
                 style="@style/question_style"
@@ -54,6 +103,20 @@
                 android:id="@+id/txt_question4"
                 style="@style/question_style"
                 android:text="@string/question4"/>
+        <RadioGroup
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/design_default_color_primary_dark">
+            <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_true"/>
+            <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_false" android:visibility="visible"/>
+        </RadioGroup>
 
         <TextView
                 style="@style/question_style"
@@ -64,6 +127,20 @@
                 android:id="@+id/txt_question5"
                 style="@style/question_style"
                 android:text="@string/question5"/>
+        <RadioGroup
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/design_default_color_primary_dark">
+            <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_true"/>
+            <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_false" android:visibility="visible"/>
+        </RadioGroup>
 
         <Button
                 android:id="@+id/btn_submit_survey"
@@ -73,3 +150,15 @@
     </LinearLayout>
 </ScrollView>
 
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/navigation"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_gravity="start"
+                android:background="@color/design_default_color_primary_dark"
+                app:menu="@menu/bottom_navigation"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
