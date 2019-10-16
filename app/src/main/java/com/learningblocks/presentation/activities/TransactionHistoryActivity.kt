@@ -1,17 +1,20 @@
 package com.learningblocks.presentation.activities
 
+import android.content.Intent
 import android.os.Bundle
-import android.util.Log
-import android.view.MenuItem
-import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.android.material.bottomnavigation.BottomNavigationView.OnNavigationItemReselectedListener
+import com.google.android.material.bottomnavigation.BottomNavigationView.OnNavigationItemSelectedListener
 import com.learningblocks.R
 import com.learningblocks.presentation.adapters.TransactionHistoryAdapter
 import kotlinx.android.synthetic.main.activity_transaction_history.*
 
-class TransactionHistoryActivity : BaseActivity(), BottomNavigationView.OnNavigationItemSelectedListener{
+class TransactionHistoryActivity : BaseActivity(){
+
+    companion object{
+        const val TRANSACTION_HASH = "hash"
+        const val TRANSACTION_DATE = "transaction_date"
+        const val TRANSACTION_SENT_RECEIVED = "transaction_sent_received"
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,40 +23,32 @@ class TransactionHistoryActivity : BaseActivity(), BottomNavigationView.OnNaviga
         init()
     }
 
-    companion object{
-        const val TRANSACTION_HASH = "hash"
-        const val TRANSACTION_DATE = "transaction_date"
-        const val TRANSACTION_SENT_RECEIVED = "transaction_sent_received"
-    }
-
-    override fun onNavigationItemSelected(menuItem: MenuItem): Boolean {
-
-        Toast.makeText(this, menuItem.title,Toast.LENGTH_LONG).show()
-        return true
-    }
-
-    private fun init(): Boolean {
-        setSupportActionBar(findViewById(R.id.wallet_toolbar))
-        rv_transactions.layoutManager = LinearLayoutManager(this)
-        rv_transactions.adapter = TransactionHistoryAdapter(getMockData())
-
-        // set menu listener
-        val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { menuItem ->
+    override fun onStart() {
+        super.onStart()
+        val mOnNavigationItemSelectedListener = OnNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
-                R.id.action_favorites -> {
+                R.id.action_home -> {
                     return@OnNavigationItemSelectedListener true
                 }
-                R.id.action_schedules -> {
-                    return@OnNavigationItemSelectedListener true
-                }
-                R.id.action_music -> {
+                R.id.action_quiz -> {
+                    startActivity(Intent(applicationContext, QuizActivity::class.java))
                     return@OnNavigationItemSelectedListener true
                 }
             }
             false
         }
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
-        return true
+    }
+
+    override fun onStop() {
+        super.onStop()
+        navigation.setOnNavigationItemSelectedListener(null)
+    }
+
+    private fun init(){
+        setSupportActionBar(findViewById(R.id.wallet_toolbar))
+        rv_transactions.layoutManager = LinearLayoutManager(this)
+        rv_transactions.adapter = TransactionHistoryAdapter(getMockData())
     }
 
     // --- purely used for mck data
