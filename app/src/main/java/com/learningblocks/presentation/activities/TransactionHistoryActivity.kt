@@ -28,6 +28,7 @@ class TransactionHistoryActivity : BaseActivity(){
         val mOnNavigationItemSelectedListener = OnNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.action_home -> {
+                    startActivity(Intent(applicationContext, HomeActivity::class.java))
                     return@OnNavigationItemSelectedListener true
                 }
                 R.id.action_quiz -> {

@@ -9,7 +9,7 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".presentation.activities.TransactionHistoryActivity">
+        <activity android:name=".presentation.activities.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -18,6 +18,7 @@
         </activity>
         <activity android:name=".presentation.activities.BaseActivity"/>
         <activity android:name=".presentation.activities.QuizActivity"/>
+        <activity android:name=".presentation.activities.TransactionHistoryActivity"/>
     </application>
 
 </manifest>
